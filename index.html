@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Aprenda sobre as principais tags HTML de mídia, como <audio>, <video> e <iframe>, e como usá-las para incorporar conteúdo multimídia em suas páginas web.">
+    <title>Tags HTML de mídia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color:  #f0f8ff;
+        }
+        header {
+            background-color: #3269a8;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+        h1 p{
+            color: #333;
+        }
+        p {
+            font-size: 16px;
+            text-align: justify;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        h1 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #3269a8; 
+            text-align: left;  
+        }
+        ul li{
+            display: inline-block;
+            list-style: none;
+            margin-right: 100px;
+            padding: 10px 15px;
+            transition: background-color 0.3s ease;
+        }
+        ul li:hover {
+            background-color: #1a4067; 
+            border-radius: 5px;
+            cursor: pointer;
+            color: white; 
+        }
+        ul li a{
+            text-decoration: none;
+            color: #3269a8;
+        }
+        ol {
+            list-style: disc;
+            color: #333;
+        }
+        nav {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        section {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #e6f2ff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        section ol{
+        
+            font-size: 16px;
+        }
+        section img {
+            display: block;
+            margin: auto;
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="inicio">Tags HTML de mídia</h1>
+    <hr>
+    <nav>
+        <h2>Índice</h2>
+        <ul>
+            <li><a href="#historia">História das Mídias</a></li>
+            <li><a href="#img">Tag Img</a></li>
+            <li><a href="#audio">Tag Aúdio</a></li>
+            <li><a href="#video">Tag Video</a></li>
+
+        </ul>
+    </nav>
+    <h2 id="historia">História das Mídias</h2>
+        <p>No início da web, o HTML era focado apenas em texto e hiperlinks. Com o tempo, surgiram novas versões que introduziram suporte para mídias visuais e interativas:
+        </p>
+        <p>
+            <ol>
+                <li>HTML 2.0 (1995): Introduziu a tag <img>, permitindo a exibição de imagens.</li>
+                <li>HTML 3.2 (1997): Adicionou suporte para <object>, permitindo a incorporação de conteúdos externos, como animações em Flash.</li>
+                <li>HTML 4.01 (1999): Melhorou a integração de mídias com <embed> e <object>, além de permitir a inclusão de arquivos multimídia.</li>
+                <li>HTML5 (2014): Revolucionou o suporte a mídias com as tags <audio> e <video>, eliminando a necessidade de plugins externos.</li>
+            </ol>
+        </p>
+    <main>
+        <section>
+            <h2 id="img">Tag Img</h2>
+            <small><a href="#inicio">(Voltar)</a></small>
+            <p>A tag <code>img</code> no HTML é usada para exibir imagens em uma página da web. Ela é um elemento autocontido, ou seja, não precisa de uma tag de fechamento <code> (/img) </code>.</p>
+            <p>Exemplo de uso:</p>
+            <pre><code>&lt;img src="caminho/para/imagem.jpg" alt="Descrição da imagem"&gt;</code></pre>
+            <p>Onde:</p>
+            <ol>
+                <li><code>src</code>: Especifica o caminho para a imagem.</li>
+                <li><code>alt</code>: Fornece uma descrição alternativa da imagem, importante para acessibilidade.</li>
+            </ol>
+            <p>Exemplo prático:</p>
+            <pre><code>&lt;img src="https://images.unsplash.com/photo-1746294250258-a2c039ece448?q=80&w=1589&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagem de exemplo"&gt;</code></pre>
+            <img width="400" height="400"src="https://images.unsplash.com/photo-1746294250258-a2c039ece448?q=80&w=1589&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Imagem de exemplo">
+            <h2 id="audio">Tag Aúdio</h2>
+            <small><a href="#inicio">(Voltar)</a></small>
+            <p>A tag <code><audio></code> no HTML é usada para incorporar arquivos de áudio diretamente na página, sem necessidade de plugins externos. Ela foi introduzida no HTML5 e permite que os navegadores reproduzam som de forma nativa.</p> 
+            <p>Exemplo de uso:</p>
+            <pre><code>&lt;audio controls&gt;
+            &lt;source src="caminho/para/audio.mp3" type="audio/mpeg"&gt;
+            &lt;source src="caminho/para/audio.ogg" type="audio/ogg"&gt;
+            Seu navegador não suporta o elemento de áudio.
+            &lt;/audio&gt;</code></pre>
+            <p>Onde:</p>
+            <ol>
+                <li><code>controls</code>: Adiciona controles de reprodução, como play, pause e volume.</li>
+                <li><code>source</code>: Especifica o caminho para o arquivo de áudio e seu tipo MIME.</li>
+                <li>O texto entre as tags <code>audio</code> é exibido se o navegador não suportar o elemento.</li>
+            </ol>
+            <p>Exemplo prático:</p>
+            <pre><code>&lt;audio controls&gt;
+            &lt;source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"&gt;
+            &lt;source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.ogg" type="audio/ogg"&gt;
+            Seu navegador não suporta o elemento de áudio.
+            &lt;/audio&gt;</code></pre>   
+            <audio controls>
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.ogg" type="audio/ogg">
+                Seu navegador não suporta o elemento de áudio.   
+            </audio>
+            <h2 id="video">Tag Video</h2>
+            <small><a href="#inicio">(Voltar)</a></small>
+            <p>A tag <code>video</code> no HTML é usada para incorporar vídeos diretamente na página, permitindo reprodução sem a necessidade de plugins externos. Assim como a tag <code>audio</code>, ela foi introduzida no HTML5.</p>
+            <p>Exemplo de uso:</p>
+            <pre><code>&lt;video width="640" height="360" controls&gt;  
+            &lt;source src="caminho/para/video.mp4" type="video/mp4"&gt;
+            &lt;source src="caminho/para/video.webm" type="video/webm"&gt;
+            Seu navegador não suporta o elemento de vídeo.
+            &lt;/video&gt;</code></pre>
+            <p>Onde:</p>
+            <ol>
+                <li><code>width</code> e <code>height</code>: Definem as dimensões do vídeo.</li>
+                <li><code>controls</code>: Adiciona controles de reprodução, como play, pause e volume.</li>
+                <li><code>source</code>: Especifica o caminho para o arquivo de vídeo e seu tipo MIME.</li>
+                <li>O texto entre as tags <code>video</code> é exibido se o navegador não suportar o elemento.</li>
+            </ol>
+            <p>Exemplo prático:</p>
+            <pre><code>&lt;video width="640" height="360" controls&gt;
+            &lt;source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4"&gt;
+            &lt;source src="https://www.w3schools.com/html/mov_bbb.webm" type="video/webm"&gt;
+            Seu navegador não suporta o elemento de vídeo.
+            &lt;/video&gt;</code></pre>
+            <video width="640" height="360" controls>
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <source src="https://www.w3schools.com/html/mov_bbb.webm" type="video/webm">
+                Seu navegador não suporta o elemento de vídeo.
+            </video>
+        </p> 
+        </section>   
+    <p>Essas tags são essenciais para criar páginas web ricas em conteúdo multimídia, melhorando a experiência do usuário e tornando o site mais interativo. É importante sempre fornecer alternativas de texto (como o atributo <code>alt</code> para imagens e mensagens de fallback para áudio e vídeo) para garantir acessibilidade.</p>
+    <p>Além disso, é recomendável otimizar os arquivos de mídia para web, garantindo tempos de carregamento rápidos e uma boa experiência do usuário. Isso inclui o uso de formatos adequados, compressão de arquivos e especificação de dimensões corretas.</p>
+    </main>
+    <footer>
+        <p style="text-align: center; margin-top: 20px;">&copy; 2025 Tags HTML de mídia</p>
+</body>
+</html>
